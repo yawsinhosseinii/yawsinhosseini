@@ -8,12 +8,7 @@ let click = $.querySelector(".loader1");
 let loaderClick = $.querySelector(".loader2");
 let welcomeText = $.querySelector(".welcomeText");
 
-click.addEventListener("touch", function () {
-  click.style.display = "none";
-  loaderClick.style.display = "inline";
-  navigation.style.display = "flex";
-  welcomeText.style.display = "none";
-});
+
 click.addEventListener("click", function () {
   click.style.display = "none";
   loaderClick.style.display = "inline";
@@ -21,12 +16,7 @@ click.addEventListener("click", function () {
   welcomeText.style.display = "none";
 });
 
-loaderClick.addEventListener("touch", function () {
-  click.style.display = "inline";
-  loaderClick.style.display = "none";
-  navigation.style.display = "none";
-  welcomeText.style.display = "flex";
-});
+
 loaderClick.addEventListener("click", function () {
   click.style.display = "inline";
   loaderClick.style.display = "none";
@@ -37,7 +27,7 @@ loaderClick.addEventListener("click", function () {
 window.addEventListener("load", function () {
   setTimeout(function () {
     loadingElems.style.display = "none";
-  }, 2500);
+  }, 3500);
 });
 
 let backgrounds = [
@@ -59,25 +49,7 @@ let backgrounds = [
   "17.jpg",
   "18.jpg",
 ];
-changeTheme.addEventListener("touch", function () {
-  loader.style.display = "block";
-  setTimeout(function () {
-    let num;
-    let num1;
-    backgrounds.forEach(function () {
-      num1 = Math.floor(Math.random() * 17);
-      if (num == num1) {
-        ++num1;
-      }
-      num = num1;
-    });
 
-    $.body.style.background = "url(" + backgrounds[num] + ")";
-    $.body.style.backgroundSize = "cover";
-    $.body.style.backgroundPosition = "center";
-    loader.style.display = "none";
-  }, 2000);
-});
 changeTheme.addEventListener("click", function () {
   loader.style.display = "block";
   setTimeout(function () {
