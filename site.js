@@ -37,7 +37,7 @@ loaderClick.addEventListener("click", function () {
 window.addEventListener("load", function () {
   setTimeout(function () {
     loadingElems.style.display = "none";
-  }, 3500);
+  }, 2500);
 });
 
 let backgrounds = [
